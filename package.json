@@ -8,6 +8,7 @@
   "repository": "https://github.com/Uniswap/routing-api",
   "scripts": {
     "postinstall": "patch-package @uniswap/sdk-core",
+    "postinstall-universal": "patch-package @uniswap/universal-router-sdk",
     "compile-external-types": "npx typechain --target ethers-v5 --out-dir lib/types/ext 'lib/abis/**/*.json'",
     "compile-v3-contract-types": "npx typechain --target ethers-v5 --out-dir lib/types/v3 './node_modules/@uniswap/?(v3-core|v3-periphery)/artifacts/contracts/**/*.json'",
     "build": "run-p compile-external-types compile-v3-contract-types && tsc",
@@ -90,7 +91,7 @@
     "@types/semver": "^7.5.8",
     "@uniswap/smart-order-router": "3.28.7",
     "@uniswap/token-lists": "^1.0.0-beta.33",
-    "@uniswap/universal-router-sdk": "^1.8.1",
+    "@uniswap/universal-router-sdk": "^1.9.0",
     "@uniswap/v2-sdk": "^4.3.0",
     "@uniswap/v3-periphery": "^1.4.4",
     "@uniswap/v3-sdk": "^3.11.0",
